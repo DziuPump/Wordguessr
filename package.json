@@ -1,0 +1,18 @@
+{
+  "name": "wordguessr_node",
+  "version": "1.0.0",
+  "description": "Word guessing thing",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "author": "DP",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12"
+  }
+}

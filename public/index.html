@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordguessr</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="w-screen h-screen">
+
+
+        <!-- header -->
+        <div class="w-screen">
+            <nav class="bg-gradient-to-r from-neutral-900 to-gray-700 py-5 text-center header">
+                <div>
+                    <h1 class=" text-xl ">
+                        <a href=" /" class="text-yellow-400 font-lobster text-4xl ">Wordguessr</a>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+        <!--  header end -->
+
+        <div id="numberOfTries" class="justify-self-center self-center font-lobster sm:ml-28 xl:ml-0">
+
+        </div>
+
+
+        <!--  background start -->
+        <div class="background bg-gray-200 blur-sm brightness-1 ">
+            <!-- <img src="../src/background/A.png" id="aBackground" class="backgroundLetter"> -->
+            <div id="aBackground" class="backgroundLetter">A</div>
+            <div id="bBackground" class="backgroundLetter">B</div>
+            <div id="cBackground" class="backgroundLetter">C</div>
+            <div id="xBackground" class="backgroundLetter">X</div>
+            <div id="hBackground" class="backgroundLetter">H</div>
+            <div id="tBackground" class="backgroundLetter">T</div>
+            <div id="mBackground" class="backgroundLetter">M</div>
+        </div>
+        <!--  background end -->
+        <div id="zodis" class="w-screen h-screen sm:mt-10">
+
+        </div>
+
+        <div class="w-screen h-screen flex justify-center items-end">
+
+
+
+            <div id="getWord" class="justify-self-center self-center font-lobster">
+                <button id="getWordButton"
+                    class="rounded-lg border-2 border-black m-2 p-5 bg-black hover:bg-slate-900 focus:ring focus:ring-yellow-400">Get
+                    a
+                    Word</button>
+            </div>
+
+            <div id="keyboard" class="rounded-lg border-2 border-slate-800 mb-36">
+                <button id="q"
+                    class="letterButton rounded-lg border-2 border-black m-1 sm:ml-5 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">Q</button>
+                <button id="w"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">W</button>
+                <button id="e"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">E</button>
+                <button id="r"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">R</button>
+                <button id="t"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">T</button>
+                <button id="y"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">Y</button>
+                <button id="u"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">U</button>
+                <button id="i"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">I</button>
+                <button id="o"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">O</button>
+                <button id="p"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">P</button>
+                <br>
+                <button id="a"
+                    class="letterButton rounded-lg border-2 border-black m-1 ml-10 sm:ml-15 xl:ml-16 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">A</button>
+                <button id="s"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">S</button>
+                <button id="d"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">D</button>
+                <button id="f"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">F</button>
+                <button id="g"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">G</button>
+                <button id="h"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">H</button>
+                <button id="j"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">J</button>
+                <button id="k"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">K</button>
+                <button id="l"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">L</button>
+                <br>
+                <button id="z"
+                    class="letterButton rounded-lg border-2 border-black m-1 ml-20 sm:ml-25 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">Z</button>
+                <button id="x"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">X</button>
+                <button id="c"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">C</button>
+                <button id="v"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">V</button>
+                <button id="b"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">B</button>
+                <button id="n"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">N</button>
+                <button id="m"
+                    class="letterButton rounded-lg border-2 border-black m-1 p-5 bg-slate-700 focus:ring focus:ring-yellow-400 sm:w-3 sm:h-3 sm:text-sm md:text-base xl:text-3xl xl:w-20 xl:h-auto">M</button>
+            </div>
+        </div>
+        <!-- <footer class="footer">
+                    <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                        </path>
+                    </svg>
+                </footer> -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</html>

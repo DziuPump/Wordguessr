@@ -1,0 +1,372 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+body{
+    overflow: hidden;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer svg {
+    position: relative;
+    display: block;
+    width: calc(168% + 1.3px);
+    height: 70px;
+}
+
+.footer .shape-fill {
+    fill: #191919;
+}
+
+.background{
+    display: inline-block;
+    height:91.18%;
+    width:100vw;
+    overflow: hidden;
+    position:fixed;
+}
+
+.header{
+    width: 100%;
+    height:10%
+}
+
+.backgroundLetter{
+    display: inline-block;
+    position: absolute;
+    font-size: 6.7em;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.separatedLetters {
+    padding: 0.2em;
+    margin: 0.2em;
+    font-size: 3em;
+    background-color: black;
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10%;
+    color: white;
+    opacity: 0.8;
+}
+
+.letterButton{
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    height: 2.5em;
+    width: 2.5em;
+    z-index: 1;
+    border: solid white;
+}
+
+.letterButtonEnabled :hover{
+    background-color: rgb(90, 108, 133);
+}
+
+.letterButtonDisabled :hover{
+    background-color: rgb(90, 108, 133);
+}
+
+#getWord{
+    display: inline-block;
+    position:absolute;
+    padding-bottom: 2em;
+    line-height: 0px;
+    box-sizing: border-box;
+    opacity: 0.8;
+
+}
+
+#getWordButton{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    height: 1.5em;
+    width: 20em;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+#zodis{
+    z-index: 0;
+    display: inline-block;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24em;
+    opacity: 0.8;
+}
+
+#numberOfTries{
+    font-size: 2em;
+    font-color: black;
+    display: inline-block;
+    position:absolute;
+    z-index: 1;
+    padding-left: 44%;
+    padding-top: 1em;
+}
+
+#keyboard{
+    display: inline-block;
+    position:absolute;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.65;
+}
+
+#aBackground{
+    animation: aMoveLetters 130s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#bBackground{
+    animation: bMoveLetters 120s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#cBackground{
+    animation: cMoveLetters 150s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#xBackground{
+    animation: xMoveLetters 135s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#hBackground{
+    animation: hMoveLetters 195s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#tBackground{
+    animation: tMoveLetters 195s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#mBackground{
+    animation: mMoveLetters 195s 4;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aMoveLetters{
+    0%{
+        left: 0%;
+        top: 0%; 
+        color: blue;
+    }
+    25%{
+        left: 50%;
+        top: 100%;
+        color: red;
+    }
+    50%{
+        left: 100%;
+        top: 50%;
+        color: yellow;
+    }
+    60%{
+        left: 80%;
+        top: 0%;
+        color: green;
+    }
+    80%{
+        left:20%;
+        top:100%;
+        color: orange;
+    }
+    100%{
+        left: 0%;
+        top: 0%;
+        transform: rotate(-280deg);
+    }
+}
+
+@keyframes bMoveLetters{
+    0%{
+        left: 50%;
+        top: 90%; 
+        color: orange;
+    }
+    25%{
+        left: 0%;
+        top: 50%;
+
+    }
+    50%{
+        left: 100%;
+        top: 20%;
+        color: blue;
+    }
+    75%{
+        left: 60%;
+        top: 0%;
+    }
+    100%{
+        left: 50%;
+        top: 90%;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes cMoveLetters{
+    0%{
+        left: 36%;
+        top: 74%; 
+        color: red;
+    }
+    25%{
+        left: 60%;
+        top: 0%;
+
+    }
+    50%{
+        left: 40%;
+        top: 100%;
+    }
+    75%{
+        left: 100%;
+        top: 60%;
+        color: blue;
+    }
+    100%{
+        left: 50%;
+        top: 100%;
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes xMoveLetters{
+    0%{
+        left: 100%;
+        top: 100%; 
+        color: green;
+    }
+    25%{
+        left: 0%;
+        top: 0%;
+
+    }
+    50%{
+        left: 60%;
+        top: 100%;
+    }
+    75%{
+        left: 0%;
+        top: 80%;
+    }
+    100%{
+        left: 100%;
+        top: 100%;
+        transform: rotate(330deg);
+        color: blue;
+    }
+}
+
+@keyframes hMoveLetters{
+    0%{
+        left: 0%;
+        top: 0%; 
+        color: gray;
+    }
+    25%{
+        left: 30%;
+        top: 100%;
+
+    }
+    50%{
+        left: 40%;
+        top: 0%;
+    }
+    75%{
+        left: 80%;
+        top: 100%;
+    }
+    100%{
+        left: 0%;
+        top: 0%;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes tMoveLetters{
+    0%{
+        left: 60%;
+        top: 0%; 
+        color: aqua;
+    }
+    25%{
+        left: 40%;
+        top: 100%;
+
+    }
+    50%{
+        left: 45%;
+        top: 0%;
+    }
+    75%{
+        left: 80%;
+        top: 100%;
+        color: orange;
+    }
+    100%{
+        left: 60%;
+        top: 0%;
+        transform: rotate(140deg);
+    }
+}
+
+@keyframes mMoveLetters{
+    0%{
+        left: 50%;
+        top: 50%; 
+    }
+    25%{
+        left: 75%;
+        top: 100%;
+
+    }
+    50%{
+        left: 80%;
+        top: 0%;
+        color: red;
+    }
+    75%{
+        left: 60%;
+        top: 100%;
+    }
+    100%{
+        left: 50%;
+        top: 50%;
+        transform: rotate(-100deg);  
+    }
+}
+
+
+
+
