@@ -1,0 +1,3 @@
+-Go into public>index.html
+-Press Get A Word to get a randomly generated word (You can go into console ctrl+shift+J to see how it works
+-Guess letters, if you're right the letter shows up, if you're wrong it's borders turn red
